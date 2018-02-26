@@ -39,7 +39,7 @@ class Application(Frame):
         self.erstellen = Button(self.root, text="Eintrag hinzufügen", bg="#5e5e5e", fg="#a1dbcd", height=2, width=100, command = self.EingabeWindow)
 
 
-        # hinzufügen
+        # hinzufügen +
         self.erstellen.pack(side=BOTTOM)
 
     def EingabeWindow(self):
