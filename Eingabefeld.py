@@ -31,6 +31,8 @@ class Eingabe(Frame):
         ready = Button(self.rootEingabe, text="Fertig", bg="#5e5e5e", fg="#a1dbcd", height=2, width=10)
 
         #Label/Entry
+        lzzz = Label(self.rootEingabe)
+
         l1 = Label(self.rootEingabe, text="Zweck", height = 2)
         l2 = Label(self.rootEingabe, text="Betrag in Euro", height = 2)
         l3 = Label(self.rootEingabe, text="Anmerkung", height = 2)
@@ -38,15 +40,16 @@ class Eingabe(Frame):
         zEntry = Entry(self.rootEingabe, width= 60)
         bEntry = Entry(self.rootEingabe, width= 60)
         aEntry = Entry(self.rootEingabe, width= 60)
+        
+        lzzz.grid(row = 0)
+        l1.grid(row =1)
+        l2.grid(row=2)
+        l3.grid(row=3)
 
-        l1.grid(row =0)
-        l2.grid(row=1)
-        l3.grid(row=2)
-
-        zEntry.grid(row=0, column=1)
-        bEntry.grid(row=1, column=1)
-        aEntry.grid(row=2, column=1)
-        ready.grid(row = 3, column=1)
+        zEntry.grid(row=1, column=1)
+        bEntry.grid(row=2, column=1)
+        aEntry.grid(row=3, column=1)
+        ready.grid(row = 4, column=1)
 
         #hinzufügen
 
