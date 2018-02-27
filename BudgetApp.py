@@ -1,6 +1,7 @@
 from tkinter import *
 from Tabelle import *
 from Eingabefeld import *
+import sys
 
 
 class Application(Frame):
@@ -32,7 +33,6 @@ class Application(Frame):
         self.root.geometry("%dx%d+%d+%d" % (width, height, x_coordinate, y_coordinate))
 
         mainloop()
-        self.root.destroy()
 
     def createWidgets(self):
         # Buttons
