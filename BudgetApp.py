@@ -7,6 +7,8 @@ import sys
 class Application(Frame):
 
     def __init__(self):
+        #self.count = 0
+        self.isclick = False
         self.root = Tk()
         #self.root.resizable(False, False)
         Frame.__init__(self)
@@ -14,12 +16,15 @@ class Application(Frame):
         self.createWidgets()
         self.Window()
 
+    def ifclicked(self):
+        self.isclick = True
+
     def Window(self):
         table = Table(self.root, ["Zweck", "Betrag in Euro", "Anmerkung"], column_minwidths=[None, None, None])
         table.pack(expand=True, fill=X, padx=10, pady=10)
-        table.set_data([[1, 1, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
-        table.cell(0, 0, "")
-        table.cell(1, 1, "Hi")
+        table.set_data([[1, 1, 1]])
+        #table.cell(0, 0, "")
+        #table.cell(1, 1, "Hi")
         self.root.title("Kostenplan")
         width = 700
         height = 500
@@ -43,7 +48,10 @@ class Application(Frame):
         self.erstellen.pack(side=BOTTOM)
 
     def EingabeWindow(self):
+
         Eingabe()
+
+
 
 
 Application()

@@ -1,9 +1,13 @@
 from tkinter import *
 from Tabelle import *
+from  BudgetApp import *
 
 class Eingabe(Frame):
 
     def __init__(self):
+        self.a = None
+        self.b = None
+        self.c = None
 
         self.rootEingabe = Tk()
         self.rootEingabe.resizable(False, False)
@@ -29,6 +33,8 @@ class Eingabe(Frame):
         mainloop()
 
     def createEingabeWidgets(self):
+
+
         #Buttons
         self.ready = Button(self.rootEingabe, text="Fertig", bg="#5e5e5e", fg="#a1dbcd", height=2, width=10, command = self.readyF)
 
@@ -54,16 +60,12 @@ class Eingabe(Frame):
         self.ready.grid(row = 4, column=1)
 
     def readyF(self):
-
+        #Application.count += 1
+        Application.ifclicked()
         self.a = self.zEntry.get()
         self.b = self.bEntry.get()
         self.c = self.aEntry.get()
-        print(self.a)
-        if self.b:
-            print(self.b + "€")
-        print(self.c)
-        self.rootEingabe.quit()
-
+        self.rootEingabe.destroy()
 
 
 
